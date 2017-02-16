@@ -25,4 +25,5 @@ Enemy CreateRandomEnemy()
 	EnemyType en;
 	rand() % 4;
 	return en;
+
 }
