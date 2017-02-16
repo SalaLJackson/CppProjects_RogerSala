@@ -20,15 +20,16 @@ struct Enemy
 
 void main()
 {
+	srand(time(NULL));
 	cout << "Enemy list: " << endl;
 	Enemy BadGuy[NumEnemies];
 	bool correct = true;
 	for(int i=0;i<NumEnemies;i++)
 	{
 		BadGuy[i] = CreateRandomEnemy();
-		for(int j=0;j<NumEnemies && correct==true;j++)
+		for(int j=0;j<NumEnemies && correct==true && i!=0;j++)
 		{
-			if(BadGuy[i]==BadGuy[j])
+			if(BadGuy[i]==BadGuy[j] && i!=j)
 			{
 				i--;
 				correct = false;
@@ -50,7 +51,6 @@ bool operator == (Enemy e1,Enemy e2)
 Enemy CreateRandomEnemy ()
 {
 	Enemy e;
-	srand(time(NULL));
 	e.health = rand() % 5;
 	e.name = names[rand() % 6];
 	int r=rand()%4;
