@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C03C2170-151C-417E-ADA7-A68CF3306681}</ProjectGuid>
+    <ProjectGuid>{64524017-1E06-4FCF-8223-92F8749550C3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Random​EnemyGenerator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
