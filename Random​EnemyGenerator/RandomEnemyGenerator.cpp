@@ -3,9 +3,9 @@
 #include <string>
 using namespace std;
 
-enum EnemyType {zombie, vampire,ghost,witch};
+enum class EnemyType {zombie, vampire,ghost,witch,MAX};//Lo de MAX es un truqillo per coneixer el nombre de enums.
 
-string names[] = { "Gruntilda","Pepe","Skel","Vlad","Mattie","Manolo" };
+string names[] = { "Gruntilda","Pepe","Skel","Vlad","Mattie","Manolo"}; 
 
 const int NumEnemies = 5;
 
@@ -20,47 +20,46 @@ struct Enemy
 
 void main()
 {
-	srand(time(NULL));
+	srand(static_cast<unsigned>(time(nullptr)));//Srand de C++, fins ara utilitzavem el de C.
 	cout << "Enemy list: " << endl;
 	Enemy BadGuy[NumEnemies];
 	bool correct = true;
-	for(int i=0;i<NumEnemies;i++)
+	for (int i{ 0 }; i < NumEnemies; i++)
 	{
-		BadGuy[i] = CreateRandomEnemy();
-		for(int j=0;j<NumEnemies && correct==true && i!=0;j++)
+		BadGuy[i] = createRandomEnemy();
+		int j{ 0 };
+		while(j < NumEnemies && correct == true)
 		{
 			if(BadGuy[i]==BadGuy[j] && i!=j)
 			{
 				i--;
 				correct = false;
 			}
+			j++;
 		}
 		cout << "El nom de l'enemic numero " << i << " es " << BadGuy[i].name << " te un total de salut de " << BadGuy[i].health << " i es de tipus " << GetEnemyTypeString(BadGuy[i].type) << endl;
 	}
 }
-
-bool operator == (Enemy e1,Enemy e2)
+//Super FOR.
+/*
+for(auto &enemy : BadGuy)
 {
-	if(e1.type==e2.type && e1.name==e2.name)
-	{
-		return true;
-	}
-	return false;
+	std::cout<<enemy.name;
+}
+*/
+
+bool operator == (const Enemy e1,const Enemy e2)
+{
+	return e1.name == e2.name && e1.type == e2.type; //Com que demana un bool, puc tornar-lo així directament.
 }
 
-Enemy CreateRandomEnemy ()
+Enemy createRandomEnemy () //Notació lower camel case per a funcions.
 {
+	const int MAX_HEALTH = 100;
 	Enemy e;
-	e.health = rand() % 5;
-	e.name = names[rand() % 6];
-	int r=rand()%4;
-	switch(r)
-	{
-	case(0): e.type = zombie; break;
-	case(1): e.type = vampire; break;
-	case(2): e.type = ghost; break;
-	default: e.type = witch;
-	}
+	e.health = rand() % MAX_HEALTH;
+	e.name = names[rand() % (sizeof names / sizeof std::string)];//Gracies a aquesta divisió, aprofito el nombre de bites del struct i el dels strings, per trobar el nombre d'strings de l'struct.
+	e.type = static_cast<EnemyType>(rand() % static_cast<int>(EnemyType::MAX));
 	return e;
 }
 
@@ -68,9 +67,9 @@ string GetEnemyTypeString(EnemyType t)
 {
 	switch(t)
 	{
-	case(0):return "zombie";
-	case(1):return "vampire";
-	case(2):return "ghost";
+	case(EnemyType::zombie):return "zombie";
+	case(EnemyType::vampire):return "vampire";
+	case(EnemyType::ghost):return "ghost";
 	default:return "witch";
 	}
 }
