@@ -40,11 +40,12 @@ void main()
 		cout << "El nom de l'enemic numero " << i << " es " << BadGuy[i].name << " te un total de salut de " << BadGuy[i].health << " i es de tipus " << GetEnemyTypeString(BadGuy[i].type) << endl;
 	}
 }
-//Super FOR.
+
+//Super FOR. L'auto agafa directament el tipus que necessiti de l'array BadGuy.
 /*
 for(auto &enemy : BadGuy)
 {
-	std::cout<<enemy.name;
+	std::cout<<enemy.name<<"please stahp"<<enemy.type;
 }
 */
 
