@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloGitHub", "HelloGitHub\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Random​EnemyGenerator", "Random​EnemyGenerator\Random​EnemyGenerator.vcxproj", "{64524017-1E06-4FCF-8223-92F8749550C3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TheWalkingDead", "TheWalkingDead\TheWalkingDead.vcxproj", "{0BAC2929-53FC-4837-994B-960B4EF93A05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{64524017-1E06-4FCF-8223-92F8749550C3}.Release|x64.Build.0 = Release|x64
 		{64524017-1E06-4FCF-8223-92F8749550C3}.Release|x86.ActiveCfg = Release|Win32
 		{64524017-1E06-4FCF-8223-92F8749550C3}.Release|x86.Build.0 = Release|Win32
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Debug|x64.ActiveCfg = Debug|x64
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Debug|x64.Build.0 = Debug|x64
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Debug|x86.ActiveCfg = Debug|Win32
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Debug|x86.Build.0 = Debug|Win32
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Release|x64.ActiveCfg = Release|x64
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Release|x64.Build.0 = Release|x64
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Release|x86.ActiveCfg = Release|Win32
+		{0BAC2929-53FC-4837-994B-960B4EF93A05}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

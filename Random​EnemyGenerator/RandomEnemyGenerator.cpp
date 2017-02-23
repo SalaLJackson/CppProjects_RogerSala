@@ -41,7 +41,7 @@ void main()
 	}
 }
 
-//Super FOR. L'auto agafa directament el tipus que necessiti de l'array BadGuy.
+// Super FOR. L'auto agafa directament el tipus que necessiti de l'array BadGuy.
 /*
 for(auto &enemy : BadGuy)
 {
@@ -51,15 +51,15 @@ for(auto &enemy : BadGuy)
 
 bool operator == (const Enemy e1,const Enemy e2)
 {
-	return e1.name == e2.name && e1.type == e2.type; //Com que demana un bool, puc tornar-lo així directament.
+	return e1.name == e2.name && e1.type == e2.type; // Com que demana un bool, puc tornar-lo així directament.
 }
 
-Enemy createRandomEnemy () //Notació lower camel case per a funcions.
+Enemy createRandomEnemy () // Notació lower camel case per a funcions.
 {
 	const int MAX_HEALTH = 100;
 	Enemy e;
 	e.health = rand() % MAX_HEALTH;
-	e.name = names[rand() % (sizeof names / sizeof std::string)];//Gracies a aquesta divisió, aprofito el nombre de bites del struct i el dels strings, per trobar el nombre d'strings de l'struct.
+	e.name = names[rand() % (sizeof names / sizeof std::string)];// Gracies a aquesta divisió, aprofito el nombre de bites del struct i el dels strings, per trobar el nombre d'strings de l'struct.
 	e.type = static_cast<EnemyType>(rand() % static_cast<int>(EnemyType::MAX));
 	return e;
 }
