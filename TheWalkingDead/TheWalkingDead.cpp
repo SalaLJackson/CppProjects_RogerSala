@@ -34,7 +34,7 @@ public:
 Player::Player()
 {
 	weapon= static_cast<Weapon>(rand() % static_cast<int>(Weapon::MAX));
-	precision = (rand() % 100)/100.0;
+	precision = (rand() % 101)/100.0;
 	life = rand() % 101;
 }
 
@@ -69,7 +69,7 @@ void Zombie::attack(Player &p)
 	}
 	else
 	{
-		distanceToPlayer--;
+		distanceToPlayer=distanceToPlayer-speed;
 	}
 }
 
@@ -83,8 +83,12 @@ void main()
 	bool zombiesAreAlive;
 	do{
 		zombiesAreAlive = false;
+		std::cout << "Player" << std::endl;
+		std::cout << "Life: " << player.life << " Weapon: " << player.weapon << " Precision: " << player.precision << std::endl;
 		for(int i=0;i<ZOMB_NUM;i++)
 		{
+			std::cout << "Zombie" << i << std::endl;
+			std::cout << "Life: " << zombies[i].life << " Damage: " << zombies[i].damage << " PlayerDistance: " << zombies[i].distanceToPlayer << " Speed: " << zombies[i].speed << std::endl;
 			if(zombies[i].isAlive()==true)
 			{
 				player.attack(zombies[i]);
@@ -92,5 +96,14 @@ void main()
 				zombiesAreAlive = true;
 			}
 		}
+	std::cout << "-----------------------------------------------------------------------------------------------------------------" << std::endl;
 	} while (player.isAlive() == true && zombiesAreAlive == true);
+	if(zombiesAreAlive==true)
+	{
+		std::cout << "Zombies win..." << std::endl;
+	}
+	else
+	{
+		std::cout << "Player wins!" << std::endl;
+	}
 }
