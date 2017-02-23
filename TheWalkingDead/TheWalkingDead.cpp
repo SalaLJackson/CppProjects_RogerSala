@@ -48,12 +48,12 @@ Zombie::Zombie()
 
 bool Zombie::isAlive()
 {
-	return life != 0 || life > 0;
+	return life != 0 && life > 0;
 }
 
 bool Player::isAlive()
 {
-	return life != 0 || life > 0;
+	return life != 0 && life > 0;
 }
 
 void Player::attack(Zombie &z)
@@ -97,8 +97,8 @@ void main()
 			}
 		}
 	std::cout << "-----------------------------------------------------------------------------------------------------------------" << std::endl;
-	} while (player.isAlive() == true && zombiesAreAlive == true);
-	if(zombiesAreAlive==true)
+	} while (player.isAlive() && zombiesAreAlive);
+	if(zombiesAreAlive)
 	{
 		std::cout << "Zombies win..." << std::endl;
 	}
