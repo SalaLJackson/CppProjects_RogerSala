@@ -34,7 +34,7 @@ public:
 Player::Player()
 {
 	weapon= static_cast<Weapon>(rand() % static_cast<int>(Weapon::MAX));
-	precision = (rand() % 101)/100.0;
+	precision = (rand() % 101)/100.f;
 	life = rand() % 101;
 }
 
