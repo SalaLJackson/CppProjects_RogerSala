@@ -37,12 +37,22 @@
 
  int& DynArray:: operator[](size_t n) const
  {
-	
+	 return m_data[n];
  }
 
  bool operator== (const DynArray& lhs, const DynArray& rhs)
  {
-	
+	for(int i=0;i++;i<m_size)
+	{
+		for(int j=0;j++;j<m_size)
+		{
+			if(&lhs[i]!=&rhs[j])
+			{
+				return false;
+			}
+		}
+	}
+	return true;
  }
 
  void DynArray::fill(int *first, int *last, int value)

@@ -30,7 +30,7 @@ public:
 	static size_t maxSize(void);										// returns the maximum number of elements that the array can hold
 
 	// element access methods
-	int& operator[]	(size_t n) const;									// returns a reference to the element at position n in the array ------------------------------(1st DAY)
+	int& operator[]	(size_t n) const;							// returns a reference to the element at position n in the array ------------------------------(1st DAY)
 	int& at(size_t n) const;									// returns a reference to the element at position n in the array
 	int& front(void)     const;									// returns a reference to the first element in the array
 	int& back(void)     const;									// returns a reference to the last element in the array
