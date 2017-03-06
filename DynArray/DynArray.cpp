@@ -42,9 +42,9 @@
 
  bool operator== (const DynArray& lhs, const DynArray& rhs)
  {
-	for(int i=0;i++;i<m_size)
+	for(int i=0;i<m_size;i++)
 	{
-		for(int j=0;j++;j<m_size)
+		for(int j=0;j<m_size;j++)
 		{
 			if(&lhs[i]!=&rhs[j])
 			{
