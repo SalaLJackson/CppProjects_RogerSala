@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynArray", "DynArray\DynArr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Testing", "Testing\Testing.vcxproj", "{A9110966-C71B-4369-A124-73D34D4843B5}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors - Guide", "Vectors - Guide\Vectors - Guide.vcxproj", "{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{A9110966-C71B-4369-A124-73D34D4843B5}.Release|x64.Build.0 = Release|x64
 		{A9110966-C71B-4369-A124-73D34D4843B5}.Release|x86.ActiveCfg = Release|Win32
 		{A9110966-C71B-4369-A124-73D34D4843B5}.Release|x86.Build.0 = Release|Win32
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Debug|x64.ActiveCfg = Debug|x64
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Debug|x64.Build.0 = Debug|x64
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Debug|x86.ActiveCfg = Debug|Win32
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Debug|x86.Build.0 = Debug|Win32
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x64.ActiveCfg = Release|x64
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x64.Build.0 = Release|x64
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x86.ActiveCfg = Release|Win32
+		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
