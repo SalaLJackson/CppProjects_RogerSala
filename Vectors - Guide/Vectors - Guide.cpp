@@ -1,31 +1,44 @@
 #include <vector>
+#include <iostream>
+#include "Vectors - Guide.h"
 
-//Constructor sin argumentos
-std::vector<int>v1;
+void main()
+{
+	std::vector<int>v1(5); // Inicialitzem un vector de 5 posicions amb valor 0 (es impossible inicialitzar-lo sense valor).
+	std::vector<int>v2(10); // Inicialitzem un vector de 10 posicions amb valor 0.
+	std::vector<int>v3({ 10,9,8,7,6,5,4,3,2,1 }); // Inicialitzem el vector amb els valors seleccionats.
+	std::vector<std::string>v4({ "Gertrudiz","Pancracia","Anacleto","Hipolito","Eustaquio","Fulgencia" }); // Inicialitzem el vector d'strings amb els valors seleccionats.
+	std::vector<int>v5(v3); // Inicialitzem vector amb els mateixos valors que v3.
+	std::vector<std::string>v6({ "Pepe","21 de noviembre,1997","39408182X","Ginoberto","7 de junio, 1998","40391289Z","Platon","16 de enero","53424231T" });
+	std::vector<int>vSum1({ 10,3,5 });
+	std::vector<int>vSum2({ 20,8,12 });
+	addVectors(vSum1,vSum2);
+	concatVectors(vSum1, vSum2);
+}
 
-//Constructor con una lista de iniciación
-std::vector<int> v12({ 10,9,8,7,6,5,4,3,2,1 });
+std::vector<int> addVectors(std::vector<int> v1, std::vector<int> v2) // Suma els valors de dos vectors de 1 dimensió. El resultat queda en un tercer vector.
+{
+	std::vector<int>vSuma(v1);
+	if (v1.size()==v2.size())
+	{
+		for (int i = 0; i < v1.size(); i++)
+		{
+			vSuma[i] += v2[i];
+		}
+		return vSuma;
+	}
+}
 
-//Constructor de copia
-std::vector<int>v4(v12);
+void concatVectors(std::vector<int> &v1, std::vector<int> v2) // Concatena dos vectors i guarda el resultat en el primer vector.
+{
+	int x = v2.size();
+	for(int i=0;i<x;i++)
+	{
+		v1.push_back(v2[i]);
+	}
+}
 
-//Constructor con num elementos
-std::vector<int>v9(5);
+void shiftRifht()
+{
 
-//Constructor con num de elementos y valor inicial de estos
-std::vector<int>v10(5, 10);
-
-//Constructor con iteradores que copia v12 en v7
-std::vector<int>v7(v12.begin(), v12.end());
-
-//Constructor con iteradores,se puede dar un rango, copiando todos los elementos en v7 menos el primero y el último
-std::vector<int>v7(v12.begin() + 1, v12.end() - 1);
-
-//Constructor con iteradores, desde arrays
-int myArray[]{ 16,2,77,29 };
-std::vector<int> v20(myArray, myArray + sizeof(myArray) / sizeof(int));
-
-//Constructor con iteradores desde array
-int *pv;
-pv = new int[4]{ 1,2,3,4 };
-std::vector<int> v21(pv, pv + 4);
+}
