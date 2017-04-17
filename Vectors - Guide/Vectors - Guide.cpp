@@ -12,8 +12,12 @@ void main()
 	std::vector<std::string>v6({ "Pepe","21 de noviembre,1997","39408182X","Ginoberto","7 de junio, 1998","40391289Z","Platon","16 de enero","53424231T" });
 	std::vector<int>vSum1({ 10,3,5 });
 	std::vector<int>vSum2({ 20,8,12 });
+	std::vector<int>vSum3{ {20,20,20,1,2,2} };
 	addVectors(vSum1,vSum2);
 	concatVectors(vSum1, vSum2);
+	shiftRight(vSum1);
+	rotateLeft(vSum2);
+	searchAdjacent(vSum3);
 }
 
 std::vector<int> addVectors(std::vector<int> v1, std::vector<int> v2) // Suma els valors de dos vectors de 1 dimensió. El resultat queda en un tercer vector.
@@ -38,7 +42,45 @@ void concatVectors(std::vector<int> &v1, std::vector<int> v2) // Concatena dos v
 	}
 }
 
-void shiftRifht()
+void shiftRight(std::vector<int> &v1)
 {
+	int lastOne = v1[v1.size() - 1];
+	for(int i=v1.size()-1;i>=0;i--)
+	{
+		if(i==0)
+		{
+			v1[i] = lastOne;
+		}
+		else
+		{
+			v1[i] = v1[i - 1];
+		}
+	}
+}
 
+void rotateLeft(std::vector<int> &v1)
+{
+	int med = v1.size()/2+0.5;
+	for(int i=0;i<med;i++)
+	{
+		int aux = v1[i];
+		v1[i] = v1[v1.size() - 1 - i];
+		v1[v1.size() - 1 - i]=aux;
+	}
+}
+
+void searchAdjacent(std::vector<int> &v1)
+{
+	for(int i=0;i<v1.size();i++)
+	{
+		if(i>1)
+		{
+			if(v1[i]==v1[i-1] && v1[i]==v1[i-2])
+			{
+				v1[i] = rand();
+				v1[i - 1] = rand();
+				v1[i - 2] = rand();
+			}
+		}
+	}
 }
