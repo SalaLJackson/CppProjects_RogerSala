@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Testing", "Testing\Testing.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vectors - Guide", "Vectors - Guide\Vectors - Guide.vcxproj", "{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlayerRanking", "PlayerRanking\PlayerRanking.vcxproj", "{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x64.Build.0 = Release|x64
 		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x86.ActiveCfg = Release|Win32
 		{B13DDB86-F5BC-4D1C-9613-0E940FA86BD7}.Release|x86.Build.0 = Release|Win32
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Debug|x64.ActiveCfg = Debug|x64
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Debug|x64.Build.0 = Debug|x64
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Debug|x86.ActiveCfg = Debug|Win32
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Debug|x86.Build.0 = Debug|Win32
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Release|x64.ActiveCfg = Release|x64
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Release|x64.Build.0 = Release|x64
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Release|x86.ActiveCfg = Release|Win32
+		{CE11803C-6E5A-4B7E-80D6-94EB8EA7E35B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
