@@ -15,11 +15,10 @@ void main()
 	int punt;
 	std::string name;
 	std::map<int,Puntuacio>ranking;
-	ranking[1] = { "DIO",1000 };
-	ranking[2] = { "JOJO",800 };
-	ranking[3] = { "ZEPPELIN",500 };
-	ranking[4] = { "SPEEDWAGON",200 };
-	ranking[5] = {};
+	ranking[1000] = { "RAMON" };
+	ranking[800] = { "JOAN" };
+	ranking[500] = { "ZOLTAN" };
+	ranking[200] = { "SERGEI" };
 	for(auto it=ranking.begin();it!=ranking.end();++it)
 	{
 		std::cout << it->second.name << " : " << it->second.punt << std::endl;
@@ -28,6 +27,7 @@ void main()
 	std::cin >> name;
 	std::cout << std::endl << "Introdueix la teva puntuacio: ";
 	std::cin >> punt;
+	ranking[punt] = {name};
 	for(auto it=ranking.begin();it!=ranking.end();++it)
 	{
 		if(it->second.name==name)
@@ -47,7 +47,6 @@ void main()
 			{
 				int aux = it->second.punt;
 				it->second.punt = punt;
-				ranking[it - 1] = aux;
 			}
 		}
 	}
