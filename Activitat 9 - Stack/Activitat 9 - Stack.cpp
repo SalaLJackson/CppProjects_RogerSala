@@ -6,14 +6,14 @@
 
 int main()
 {
-	std::stack<int> s1({ 5,4,3,2,1 });
+	std::stack<int> s1({9,8,7 });
 	std::stack<int> s2({9,8,7,6});
 	std::stack<char> q1({'(','(','(',')','(',')',')',')','(',')'});
-	superMerge(s1, s2);
-	putHat(s1, s2);
-	transformToQ(s1);
-	isHat(s1, s2);
-	balancedP(q1);
+	auto sm = superMerge(s1, s2);
+	auto ph = putHat(s1, s2);
+	auto ttq = transformToQ(s1);
+	auto ih = isHat(s1, s2);
+	auto bp = balancedP(q1);
 	change(s1);
 	return 0;
 }
