@@ -2,7 +2,7 @@
 
 class myStack
 {
-private:
+public:
 	// Llista de nodes.
 	struct node
 	{
@@ -11,7 +11,6 @@ private:
 	};
 	// Punter que apuntarà al primer element de la llista.
 	node *s;
-public:
 	// Constructor de myStack.
 	myStack();
 	// Constructor per copia.

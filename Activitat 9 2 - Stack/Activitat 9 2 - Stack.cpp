@@ -8,7 +8,8 @@ myStack::myStack()
 
 myStack::myStack(myStack &ms)
 {
-
+	info = ms.info;
+	node = ms.node;
 }
 
 myStack::myStack(int numb,int el)
@@ -40,7 +41,14 @@ int myStack::top()
 
 int myStack::size()
 {
-	
+	node *c=s;
+	int count = 0;
+	while(c!=nullptr)
+	{
+		c = c->next;
+		count++;
+	}
+	return count;
 }
 
 bool myStack::isEmpty()
