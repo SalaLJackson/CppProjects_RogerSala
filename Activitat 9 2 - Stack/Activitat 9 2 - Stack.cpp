@@ -1,15 +1,14 @@
 #include "Activitat 9 2 - Stack.h"
 #include <iostream>
+#include <stack>
 
 myStack::myStack()
 {
 
 }
 
-myStack::myStack(myStack &ms)
+myStack::myStack(myStack &ms):s{ms.next},
 {
-	info = ms.info;
-	node = ms.node;
 }
 
 myStack::myStack(int numb,int el)
