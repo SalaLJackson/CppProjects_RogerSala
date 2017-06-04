@@ -51,16 +51,9 @@ void myStack::pop()
 
 void myStack::push(int i)
 {
-	if (isEmpty())
-	{
-		first = new node{ i, nullptr };
-	}
-	else
-	{
-		node* aux = first;
-		first = new node{ i, nullptr };
-		first->next=aux;
-	}
+	node* aux = first;
+	first = new node{ i, nullptr };
+	first->next=aux;
 	mySize++;
 }
 
