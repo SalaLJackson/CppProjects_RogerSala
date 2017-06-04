@@ -7,5 +7,10 @@ int main()
 	ay->top();
 	ay->pop();
 	ay->push(5);
+	ay->pop();
+	ay->pop();
+	ay->pop();
+	ay->pop();
+	ay->pop();
 	return 0;
 }
