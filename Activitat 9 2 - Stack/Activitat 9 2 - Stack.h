@@ -3,6 +3,7 @@
 class myStack
 {
 public:
+
 	// Llista de nodes.
 	struct node
 	{
@@ -10,8 +11,11 @@ public:
 		node *next; // Estructura recursiva: a dintre de node tenim un punter a node.
 	};
 
+	// Tamany de l'stack.
+	int mySize;
+
 	// Punter que apuntarà al primer element de la llista.
-	node *s;
+	node *first;
 
 	// Constructor de myStack.
 	myStack();
