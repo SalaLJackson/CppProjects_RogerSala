@@ -2,19 +2,12 @@
 
 int main()
 {
-	myQueue *mq;
-	mq = new myQueue(2, 5);
-	mq->push(10);
-	mq->push(13);
-	mq->back();
-	mq->front();
-	mq->pop();
-	mq->pop();
-	mq->pop();
-	mq->pop();
-	mq->pop();
-	mq->pop();
-	mq->pop();
-	mq->isEmpty();
+	int *a{ new int[3]{6,7,8} };
+	int *b{ new int {5} };
+	*a += *b;
+	a[2] = *b;
+	int s1=-7;
+	s1
+
 	return 0;
 }
