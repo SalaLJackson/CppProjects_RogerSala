@@ -7,7 +7,5 @@ int main()
 	*a += *b;
 	a[2] = *b;
 	int s1=-7;
-	s1
-
 	return 0;
 }
